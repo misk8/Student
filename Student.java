@@ -2,7 +2,7 @@
 package com.mycompany.studentdatamanager;
 
 import java.io.Serializable;
-
+//private
 public class Student implements Serializable {
 private static final long serialVersionUID = 1L;
     private String name;
@@ -10,7 +10,7 @@ private static final long serialVersionUID = 1L;
     private double gpa;
     private String department;
     private ContactInfo contactInfo;
-
+//cons
     public Student(String name, String studentId, double gpa, String department, String email, String phone) {
         this.name = name;
         this.studentId = studentId;
@@ -18,7 +18,7 @@ private static final long serialVersionUID = 1L;
         this.department = department;
         this.contactInfo = new ContactInfo(email, phone);
     }
-
+//get set
     public String getName() {
         return name;
     }
