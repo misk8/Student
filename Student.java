@@ -1,18 +1,23 @@
-public class Student {
+package com.mycompany.studentdatamanager;
+
+import java.io.Serializable;
+
+public class Student implements Serializable {
+private static final long serialVersionUID = 1L;
     private String name;
     private String studentId;
     private double gpa;
     private String department;
+    private ContactInfo contactInfo;
 
-    // Constructor
-    public Student(String name, String studentId, double gpa, String department) {
+    public Student(String name, String studentId, double gpa, String department, String email, String phone) {
         this.name = name;
         this.studentId = studentId;
         this.gpa = gpa;
         this.department = department;
+        this.contactInfo = new ContactInfo(email, phone);
     }
 
-    // Getters and Setters
     public String getName() {
         return name;
     }
@@ -45,8 +50,17 @@ public class Student {
         this.department = department;
     }
 
+    public ContactInfo getContactInfo() {
+        return contactInfo;
+    }
+
+    public void setContactInfo(ContactInfo contactInfo) {
+        this.contactInfo = contactInfo;
+    }
+
     @Override
     public String toString() {
-        return "Student ID: " + studentId + ", Name: " + name + ", GPA: " + gpa + ", Department: " + department;
+        return "ID: " + studentId + " | Name: " + name + " | GPA: " + gpa
+                + " | Dept: " + department + " | " + contactInfo.toString();
     }
 }
