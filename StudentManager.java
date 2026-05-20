@@ -1,4 +1,3 @@
-// Modified by: Refal
 package com.mycompany.studentdatamanager;
 
 import java.util.ArrayList;
