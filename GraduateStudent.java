@@ -1,4 +1,3 @@
-// Modified by: Refal
 package com.mycompany.studentdatamanager;
 
 public class GraduateStudent extends Student {
